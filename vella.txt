@@ -1,5 +1,0 @@
-const [flip,setflip] = usestate(false)
-
-<div onClick = {()=>{setflip(!flip)}}>
-    {flip: image ? normal}
-</div>
