@@ -8,7 +8,7 @@ export function Homepage() {
     return (
         
         <div className="font-sans">
-      <Navbar />
+      
       <Hero />
       <About />
       <Events />
