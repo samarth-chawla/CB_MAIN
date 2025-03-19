@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll';
+
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const links = [
-    { id: 1, link: 'home' },
-    { id: 2, link: 'about' },
-    { id: 3, link: 'events' },
-    { id: 4, link: 'team' },
-    { id: 5, link: 'contact' },
+    { id: 1, link: '/' , title:'Home'},
+    { id: 2, link: '/about' , title:'About'},
+    { id: 3, link: '/events' , title:'Events'},
+    { id: 4, link: '/team' , title:'Team'},
+    { id: 5, link: '/contact' , title:'Contact'},
   ];
 
   return (
@@ -20,10 +21,10 @@ const Navbar = () => {
       </div>
 
       <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
-          <li key={id} className="px-4 cursor-pointer capitalize font-medium hover:scale-105 duration-200">
-            <Link to={link} smooth duration={500}>
-              {link}
+        {links.map(({ id, link,title }) => (
+          <li key={id} className="px-4 cursor-pointer capitalize font-medium hover:scale-[1.3] hover:underline duration-200">
+            <Link to={link} smooth duration={500} className='transition-all duration-300'>
+              {title}
             </Link>
           </li>
         ))}

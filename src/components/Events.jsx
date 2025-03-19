@@ -51,11 +51,11 @@ const Events = () => {
               className="shadow-md shadow-gray-600 rounded-lg p-6 hover:scale-105 duration-500 bg-[#622e31]"
             >
               <div className='flex gap-4 items-center'>
-                <i class={event_icon}></i>
+                <i className={event_icon}></i>
                 <h3 className="text-2xl font-bold text-[#ff525d]">{event_name}</h3>
               </div>
               <p className="mt-2">{event_content}</p>
-              <p className="text-lg mt-2 text-gray-300 justify-end flex gap-2 items-center"><i class="fa-regular fa-calendar-check"></i>{event_date}</p>
+              <p className="text-lg mt-2 text-gray-300 justify-end flex gap-2 items-center"><i className="fa-regular fa-calendar-check"></i>{event_date}</p>
               
             </div>
           ))}
