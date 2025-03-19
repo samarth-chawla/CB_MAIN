@@ -1,8 +1,8 @@
 
-import campusCarnival from "../../public/images/campusCarnival/carnival.png"
-import hackblocks from "../../public/images/hackblocks/hack.png"
-import pixel from "../../public/images/pixelToPitch/pixel.png"
-import ux from "../../public/images/uxlerate/ux.png"
+import campusCarnival from "../images/campusCarnival/carnival.png"
+import hackblocks from "../images/hackblocks/hack.png"
+import pixel from "../images/pixelToPitch/pixel.png"
+import ux from "../images/uxlerate/ux.png"
 import { Card } from "../components/card";
 export function EventsPage() {
     const events = [

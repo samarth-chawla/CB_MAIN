@@ -1,12 +1,14 @@
 
 import { Calendar, Clock, MapPin } from "lucide-react"
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Gallery from "./gallery";
-export default function Uxelerate() {
+import { useEffect } from 'react';
+export default function Hackblocks() {
   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -19,7 +21,7 @@ export default function Uxelerate() {
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="container px-4 md:px-6 text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in">
-              Uxelerate
+              Hackblocks 1.0
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto animate-slide-up">
               Coding, Connections and lots of learnings

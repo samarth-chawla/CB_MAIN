@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 
 export const Card = ({title,link}) => {
+    
     return (
         <div className="w-full h-56 outline outline-red-500 flex items-center justify-center rounded-xl relative group">
             <div className="w-full h-full absolute opacity-0 group-hover:opacity-100 transition-all duration-1000"

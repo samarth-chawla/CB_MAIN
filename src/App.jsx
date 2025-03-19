@@ -5,10 +5,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Homepage } from './Pages/homepage';
 import { EventsPage } from './Pages/events';
 import Navbar from './components/Navbar';
-import { Carnival } from './Pages/carnival';
-import { PixelToPitch } from './Pages/pixelToPitch';
-import { Uxelerate } from './Pages/uxelerate';
-import { Hackblocks } from './Pages/hackblocks';
+import Hackblocks from './Pages/hackblocks';
+import Carnival from './Pages/carnival';
+import PixelToPitch from './Pages/pixelToPitch';
+import Uxelerate from './Pages/uxelerate'
 
 function App() {
   return (

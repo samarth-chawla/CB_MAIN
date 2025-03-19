@@ -22,8 +22,8 @@ const Navbar = () => {
 
       <ul className="hidden md:flex">
         {links.map(({ id, link,title }) => (
-          <li key={id} className="px-4 cursor-pointer capitalize font-medium hover:scale-105 duration-200">
-            <Link to={link} smooth duration={500}>
+          <li key={id} className="px-4 cursor-pointer capitalize font-medium hover:scale-[1.3] hover:underline duration-200">
+            <Link to={link} smooth duration={500} className='transition-all duration-300'>
               {title}
             </Link>
           </li>
