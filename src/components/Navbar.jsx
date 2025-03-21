@@ -7,7 +7,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const links = [
     { id: 1, link: '/' , title:'Home'},
-    { id: 2, link: '/about' , title:'About'},
+    { id: 2, link: '#about' , title:'About'},
     { id: 3, link: '/events' , title:'Events'},
     { id: 4, link: '/team' , title:'Team'},
     { id: 5, link: '/contact' , title:'Contact'},
@@ -23,7 +23,7 @@ const Navbar = () => {
       <ul className="hidden md:flex">
         {links.map(({ id, link,title }) => (
           <li key={id} className="px-4 cursor-pointer capitalize font-medium hover:scale-[1.3] hover:underline duration-200">
-            <Link to={link} smooth duration={500} className='transition-all duration-300'>
+            <Link to={link} duration={500} className='transition-all duration-300'>
               {title}
             </Link>
           </li>
@@ -38,7 +38,7 @@ const Navbar = () => {
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-black">
           {links.map(({ id, link }) => (
             <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
-              <Link onClick={() => setNav(!nav)} to={link} smooth duration={500}>
+              <Link onClick={() => setNav(!nav)} to={link} duration={500}>
                 {link}
               </Link>
             </li>

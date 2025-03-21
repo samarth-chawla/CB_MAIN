@@ -4,6 +4,82 @@ import { Calendar, Clock, MapPin } from "lucide-react"
 import React from 'react';
 import Gallery from "./gallery";
 import { useEffect } from 'react';
+import a from "../images/hackblocks/a.jpg"
+import b from "../images/hackblocks/b.jpg"
+import c from "../images/hackblocks/c.jpg"
+import d from "../images/hackblocks/d.jpg"
+import e from "../images/hackblocks/e.jpg"
+import f from "../images/hackblocks/f.jpg"
+import g from "../images/hackblocks/g.jpg"
+import h from "../images/hackblocks/h.jpg"
+import i from "../images/hackblocks/i.jpg"
+import j from "../images/hackblocks/j.jpg"
+import k from "../images/hackblocks/k.jpg"
+import o from "../images/hackblocks/o.jpg"
+const galleryImages = [
+  {
+    src: o,
+    alt: "Event image 12",
+
+  },
+  {
+    src: a,
+    alt: "Event image 1",
+
+  },
+  {
+    src: b,
+    alt: "Event image 2",
+   
+  },
+  {
+    src: c,
+    alt: "Event image 3",
+  
+  },
+  {
+    src: d,
+    alt: "Event image 4",
+  
+  },
+  {
+    src: e,
+    alt: "Event image 5",
+
+  },
+  //"/placeholder.svg?height=600&width=800&text=Event%20Image%206"
+  {
+    src: f,
+    alt: "Event image 6",
+
+  },
+  {
+    src: g,
+    alt: "Event image 7",
+ 
+  },
+  {
+    src: h,
+    alt: "Event image 8",
+ 
+  },
+  {
+    src: i,
+    alt: "Event image 9",
+
+  },
+  {
+    src: j,
+    alt: "Event image 10",
+
+  },
+  {
+    src: k,
+    alt: "Event image 11",
+ 
+  }
+  
+]
 export default function Hackblocks() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -107,7 +183,7 @@ export default function Hackblocks() {
       {/* Image Gallery */}
       <section className="py-12 md:py-16 container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center mb-10 animate-fade-in">Event Gallery</h2>
-        <Gallery />
+        <Gallery galleryImages={galleryImages}/>
       </section>
 
       {/* Footer */}
