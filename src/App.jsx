@@ -9,12 +9,16 @@ import Hackblocks from './Pages/hackblocks';
 import Carnival from './Pages/carnival';
 import PixelToPitch from './Pages/pixelToPitch';
 import Uxelerate from './Pages/uxelerate'
+import About from './components/About';
+import Team from './components/Team';
 
 function App() {
   return (
     <BrowserRouter>
     <Navbar />
     <Routes>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/team' element={<Team/>}/>
       <Route path='/' element={<Homepage/>}/>
       <Route path='/events' element={<EventsPage/>}/>
       <Route path='/events/hackblocks' element={<Hackblocks/>}/>

@@ -9,10 +9,10 @@ const About = () => {
         </div>
         <div className='flex gap-3 items-center flex-col md:flex-row'>
           <div className='rounded-md'>
-            <img src="/images/carnival.png" alt="" className='w-[100vw]'/>
+            <img src="src/images/carnival.png" alt="carnival" className='w-[100vw]'/>
           </div>
           <div>
-            <p className="text-xl">
+            <p className="text-xl text-white">
               <b>Campus Blocks</b> is dedicated to fostering a vibrant technical
               community within our college. Our mission is to provide a
               platform for students to explore, innovate, and excel in the
