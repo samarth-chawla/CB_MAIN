@@ -2,70 +2,9 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import React from "react"
-const galleryImages = [
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%201",
-    alt: "Event image 1",
 
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%202",
-    alt: "Event image 2",
-   
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%203",
-    alt: "Event image 3",
-  
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%204",
-    alt: "Event image 4",
-  
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%205",
-    alt: "Event image 5",
 
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%206",
-    alt: "Event image 6",
-
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%207",
-    alt: "Event image 7",
- 
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%208",
-    alt: "Event image 8",
- 
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%209",
-    alt: "Event image 9",
-
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%2010",
-    alt: "Event image 10",
-
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%2011",
-    alt: "Event image 11",
- 
-  },
-  {
-    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%2012",
-    alt: "Event image 12",
-
-  },
-]
-
-export default function Gallery() {
+export default function Gallery({...prop}) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
   const openLightbox = (index) => {
@@ -80,9 +19,9 @@ export default function Gallery() {
     if (selectedImage === null) return
 
     if (direction === "next") {
-      setSelectedImage((selectedImage + 1) % galleryImages.length)
+      setSelectedImage((selectedImage + 1) % prop.galleryImages.length)
     } else {
-      setSelectedImage((selectedImage - 1 + galleryImages.length) % galleryImages.length)
+      setSelectedImage((selectedImage - 1 + prop.galleryImages.length) % prop.galleryImages.length)
     }
   }
 
@@ -90,7 +29,7 @@ export default function Gallery() {
     <div className="space-y-6">
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {galleryImages.map((image, index) => (
+        {prop.galleryImages.map((image, index) => (
           <motion.div
             key={index}
             className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group"
@@ -138,8 +77,8 @@ export default function Gallery() {
 
               <div className="relative w-full max-h-[70vh] flex items-center justify-center">
                 <img
-                  src={galleryImages[selectedImage].src || "/placeholder.svg"}
-                  alt={galleryImages[selectedImage].alt}
+                  src={prop.galleryImages[selectedImage].src || "/placeholder.svg"}
+                  alt={prop.galleryImages[selectedImage].alt}
                   className="object-contain max-h-[70vh] max-w-full"
                 />
               </div>
@@ -147,7 +86,7 @@ export default function Gallery() {
               <div className="mt-4 text-white text-center">
                 
                 <p className="text-sm text-white/70">
-                  Image {selectedImage + 1} of {galleryImages.length}
+                  Image {selectedImage + 1} of {prop.galleryImages.length}
                 </p>
               </div>
 

@@ -3,6 +3,81 @@ import { Calendar, Clock, MapPin } from "lucide-react"
 
 import React, { useEffect } from 'react';
 import Gallery from "./gallery";
+import a from "../images/campusCarnival/a.jpg"
+import b from "../images/campusCarnival/b.jpg"
+import c from "../images/campusCarnival/c.jpg"
+import d from "../images/campusCarnival/d.jpg"
+import e from "../images/campusCarnival/e.jpg"
+import f from "../images/campusCarnival/f.jpg"
+import g from "../images/campusCarnival/g.jpg"
+import h from "../images/campusCarnival/h.jpg"
+import i from "../images/campusCarnival/i.jpg"
+import j from "../images/campusCarnival/j.jpg"
+import k from "../images/campusCarnival/k.jpg"
+import l from "../images/campusCarnival/l.jpg"
+const galleryImages = [
+  {
+    src: a,
+    alt: "Event image 1",
+
+  },
+  {
+    src: b,
+    alt: "Event image 2",
+   
+  },
+  {
+    src: c,
+    alt: "Event image 3",
+  
+  },
+  {
+    src: d,
+    alt: "Event image 4",
+  
+  },
+  {
+    src: e,
+    alt: "Event image 5",
+
+  },
+  //"/placeholder.svg?height=600&width=800&text=Event%20Image%206"
+  {
+    src: f,
+    alt: "Event image 6",
+
+  },
+  {
+    src: g,
+    alt: "Event image 7",
+ 
+  },
+  {
+    src: h,
+    alt: "Event image 8",
+ 
+  },
+  {
+    src: i,
+    alt: "Event image 9",
+
+  },
+  {
+    src: j,
+    alt: "Event image 10",
+
+  },
+  {
+    src: k,
+    alt: "Event image 11",
+ 
+  },
+  {
+    src: l,
+    alt: "Event image 12",
+
+  },
+]
 export default function Carnival() {
   useEffect(() => {
       window.scrollTo(0, 0);
@@ -34,13 +109,20 @@ export default function Carnival() {
           <div className="md:col-span-2 space-y-6 animate-fade-in">
             <h2 className="text-3xl font-bold tracking-tight">Event Summary</h2>
             <p className="text-lg text-muted-foreground">
-              The Annual Tech Conference brings together industry leaders, innovators, and tech enthusiasts from around
-              the world. This year's event will feature keynote speeches, interactive workshops, networking
-              opportunities, and product showcases from leading tech companies.
+            Campus Carnival brought together aspiring technologists in a vibrant showcase of talent across machine learning,
+             web development, and artificial intelligence. The event combined competitive challenges with learning opportunities,
+              creating an energetic atmosphere where participants could demonstrate their skills while expanding their knowledge.
             </p>
             <p className="text-lg text-muted-foreground">
-              Whether you're a developer, designer, entrepreneur, or tech enthusiast, this conference offers valuable
-              insights into the latest trends and technologies shaping the future of the industry.
+            The event culminated in a showcase where winners demonstrated their solutions. Many participants left with:
+            <ul className="list-disc">
+                <li>Portfolio-worthy projects demonstrating practical applications.</li>
+                <li>New connections with peers and industry contacts.</li>
+                <li>Deeper understanding of emerging technologies and methodologies.</li>
+
+            </ul>
+
+
             </p>
             
           </div>
@@ -65,7 +147,7 @@ export default function Carnival() {
                 <MapPin className="h-5 w-5 text-primary" />
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-muted-foreground">Tech Convention Center</p>
+                  <p className="text-muted-foreground">Bvcoe campus</p>
                   <p className="text-muted-foreground">123 Innovation Blvd, San Francisco</p>
                 </div>
               </div>
@@ -105,23 +187,23 @@ export default function Carnival() {
       {/* Image Gallery */}
       <section className="py-12 md:py-16 container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center mb-10 animate-fade-in">Event Gallery</h2>
-        <Gallery />
+        <Gallery galleryImages={galleryImages}/>
       </section>
 
       {/* Footer */}
       <footer className="border-t py-8 md:py-12">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground">© 2025 Tech Conference. All rights reserved.</p>
+            <p className="text-muted-foreground">© CAMPUS BLOCKS BVCOE. All rights reserved.</p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                Privacy Policy
+                Code.
               </a>
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                Terms of Service
+                Connect.
               </a>
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                Contact Us
+                Conquer.
               </a>
             </div>
           </div>
