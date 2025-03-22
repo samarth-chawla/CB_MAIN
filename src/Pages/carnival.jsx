@@ -187,7 +187,7 @@ export default function Carnival() {
       {/* Image Gallery */}
       <section className="py-12 md:py-16 container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center mb-10 animate-fade-in">Event Gallery</h2>
-        <Gallery galleryImages={galleryImages}/>
+        <Gallery images={galleryImages}/>
       </section>
 
       {/* Footer */}

@@ -16,7 +16,7 @@ import i from "../images/hackblocks/i.jpg"
 import j from "../images/hackblocks/j.jpg"
 import k from "../images/hackblocks/k.jpg"
 import o from "../images/hackblocks/o.jpg"
-const galleryImages = [
+const eventImages = [
   {
     src: o,
     alt: "Event image 12",
@@ -84,7 +84,13 @@ export default function Hackblocks() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+  const speakerImages = [
+    { src: "/src/images/hackblocks/p1.JPG", alt: "Event 1" },
+    { src: "/src/images/hackblocks/p2.JPG", alt: "Event 2" },
+    { src: "/src/images/hackblocks/p3.JPG", alt: "Event 3" },
+    { src: "/src/images/hackblocks/p4.JPG", alt: "Event 4" },
+  ]
+  
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -105,7 +111,6 @@ export default function Hackblocks() {
           </div>
         </div>
       </div>
-
       {/* Event Summary */}
       <section className="py-12 md:py-16 container px-4 md:px-6">
         <div className="grid md:grid-cols-3 gap-8">
@@ -157,16 +162,16 @@ export default function Hackblocks() {
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tight text-center mb-10 animate-fade-in">Featured Speakers</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((i) => (
+            {speakerImages.map((i,index) => (
               <div
-                key={i}
+                key={index}
                 className="bg-background rounded-lg overflow-hidden shadow-md animate-slide-up"
-                style={{ animationDelay: `${i * 100}ms` }}
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="aspect-square relative">
                   <img
-                    src={`/placeholder.svg?height=300&width=300&text=Speaker ${i}`}
-                    alt={`Speaker ${i}`}
+                    src={`${i.src}`}
+                    alt={`Speaker ${index}`}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -183,7 +188,7 @@ export default function Hackblocks() {
       {/* Image Gallery */}
       <section className="py-12 md:py-16 container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center mb-10 animate-fade-in">Event Gallery</h2>
-        <Gallery galleryImages={galleryImages}/>
+        <Gallery images={eventImages}/>
       </section>
 
       {/* Footer */}

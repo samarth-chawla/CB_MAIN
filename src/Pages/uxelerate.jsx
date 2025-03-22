@@ -5,8 +5,22 @@ import React, { useEffect } from 'react';
 import Gallery from "./gallery";
 export default function Uxelerate() {
   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+    window.scrollTo(0, 0);
+  }, []);
+  const eventImages = [
+    { src: "/src/images/uxlerate/ux1.JPG", alt: "Event 1" },
+    { src: "/src/images/uxlerate/ux2.JPG", alt: "Event 2" },
+    { src: "/src/images/uxlerate/ux3.JPG", alt: "Event 3" },
+    { src: "/src/images/uxlerate/ux4.JPG", alt: "Event 4" },
+    { src: "/src/images/uxlerate/ux5.JPG", alt: "Event 5" },
+    { src: "/src/images/uxlerate/ux6.JPG", alt: "Event 6" },
+    { src: "/src/images/uxlerate/ux7.JPG", alt: "Event 7" },
+    { src: "/src/images/uxlerate/ux8.JPG", alt: "Event 8" },
+    { src: "/src/images/uxlerate/ux9.JPG", alt: "Event 9" },
+    { src: "/src/images/uxlerate/ux10.JPG", alt: "Event 10" },
+    { src: "/src/images/uxlerate/ux11.JPG", alt: "Event 11" },
+    { src: "/src/images/uxlerate/ux12.JPG", alt: "Event 12" },
+  ]
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -42,7 +56,7 @@ export default function Uxelerate() {
               Whether you're a developer, designer, entrepreneur, or tech enthusiast, this conference offers valuable
               insights into the latest trends and technologies shaping the future of the industry.
             </p>
-            
+
           </div>
           <div className="bg-muted rounded-lg p-6 animate-slide-in-right">
             <h3 className="text-xl font-semibold mb-4">Event Details</h3>
@@ -105,7 +119,7 @@ export default function Uxelerate() {
       {/* Image Gallery */}
       <section className="py-12 md:py-16 container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center mb-10 animate-fade-in">Event Gallery</h2>
-        <Gallery />
+        <Gallery images={eventImages}/>
       </section>
 
       {/* Footer */}

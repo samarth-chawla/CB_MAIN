@@ -2,9 +2,51 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import React from "react"
+const galleryImages = [
+  {
+    src: "https://drive.google.com/file/d/1q99Kz6nHDJ4pgC_DxzYi6zIpAFFLN2jI/view",
+    alt: "Event image 1",
 
 
-export default function Gallery({...prop}) {
+  },
+  {
+    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%206",
+    alt: "Event image 6",
+
+  },
+  {
+    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%207",
+    alt: "Event image 7",
+ 
+  },
+  {
+    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%208",
+    alt: "Event image 8",
+ 
+  },
+  {
+    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%209",
+    alt: "Event image 9",
+
+  },
+  {
+    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%2010",
+    alt: "Event image 10",
+
+  },
+  {
+    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%2011",
+    alt: "Event image 11",
+ 
+  },
+  {
+    src: "/placeholder.svg?height=600&width=800&text=Event%20Image%2012",
+    alt: "Event image 12",
+
+  },
+]
+
+export default function Gallery({images}) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
   const openLightbox = (index) => {
@@ -19,9 +61,9 @@ export default function Gallery({...prop}) {
     if (selectedImage === null) return
 
     if (direction === "next") {
-      setSelectedImage((selectedImage + 1) % prop.galleryImages.length)
+      setSelectedImage((selectedImage + 1) % galleryImages.length)
     } else {
-      setSelectedImage((selectedImage - 1 + prop.galleryImages.length) % prop.galleryImages.length)
+      setSelectedImage((selectedImage - 1 + galleryImages.length) % galleryImages.length)
     }
   }
 
@@ -29,7 +71,7 @@ export default function Gallery({...prop}) {
     <div className="space-y-6">
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {prop.galleryImages.map((image, index) => (
+        {images.map((image, index) => (
           <motion.div
             key={index}
             className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group"
@@ -77,8 +119,8 @@ export default function Gallery({...prop}) {
 
               <div className="relative w-full max-h-[70vh] flex items-center justify-center">
                 <img
-                  src={prop.galleryImages[selectedImage].src || "/placeholder.svg"}
-                  alt={prop.galleryImages[selectedImage].alt}
+                  src={images[selectedImage].src || "/placeholder.svg"}
+                  alt={images[selectedImage].alt}
                   className="object-contain max-h-[70vh] max-w-full"
                 />
               </div>
@@ -86,7 +128,7 @@ export default function Gallery({...prop}) {
               <div className="mt-4 text-white text-center">
                 
                 <p className="text-sm text-white/70">
-                  Image {selectedImage + 1} of {prop.galleryImages.length}
+                  Image {selectedImage + 1} of {galleryImages.length}
                 </p>
               </div>
 
