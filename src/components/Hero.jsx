@@ -24,8 +24,8 @@ const Hero = () => {
             </div>
           <div>
             <Link to="events" duration={500} className="group text-black w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-[#c1121d] to-[#c73f48] cursor-pointer font-medium gap-2">
-              Past Events
-              <span className="group-hover:rotate-90 duration-300 font-bold text-lg">→</span>
+              Resources
+              {/* <span className="group-hover:rotate-90 duration-300 font-bold text-lg">→</span> */}
             </Link>
           </div>
         </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const links = [
     { id: 1, link: '/' , title:'Home'},
-    { id: 2, link: '#about' , title:'About'},
+    { id: 2, link: '/about' , title:'About'},
     { id: 3, link: '/events' , title:'Events'},
     { id: 4, link: '/team' , title:'Team'},
     { id: 5, link: '/contact' , title:'Contact'},

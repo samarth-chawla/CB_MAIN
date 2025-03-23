@@ -40,11 +40,11 @@ const Events = () => {
 
   return (
     <div name="events" className="w-full min-h-screen text-white">
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+      <div className="md:w-[90%] p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8 mt-20 md:text-left text-center">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">Past Events</p>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-8 px-12 sm:px-0">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-16 px-12 sm:px-0">
           {events.map(({ event_name, event_content, event_date, event_icon }, index) => (
             <div
               key={index}
